@@ -14,3 +14,7 @@ form.addEventListener('submit', function (e) {
   liMaker(input.value)
   input.value = ''
 })
+
+let itemsArray = []
+localStorage.setItem('items', JSON.stringify(itemsArray))
+const data = JSON.parse(localStorage.getItem('items'))
