@@ -8,3 +8,9 @@ const liMaker = text => {
   li.textContent = text
   ul.appendChild(li)
 }
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault()
+  liMaker(input.value)
+  input.value = ''
+})
