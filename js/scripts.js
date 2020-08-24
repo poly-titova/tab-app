@@ -23,4 +23,11 @@ localStorage.setItem('items', JSON.stringify(itemsArray))
 const data = JSON.parse(localStorage.getItem('items'))
 data.forEach(item => {
   liMaker(item)
-})git
+})
+
+button.addEventListener('click', function() {
+  localStorage.clear()
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild)
+  }
+})
