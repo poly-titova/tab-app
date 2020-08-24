@@ -11,6 +11,8 @@ const liMaker = text => {
 
 form.addEventListener('submit', function (e) {
   e.preventDefault()
+  itemsArray.push(input.value)
+  localStorage.setItem('items', JSON.stringify(itemsArray))
   liMaker(input.value)
   input.value = ''
 })
